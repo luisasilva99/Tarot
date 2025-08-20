@@ -1,13 +1,19 @@
-import { Outlet } from "react-router-dom";
+import { Routes, Route, Link } from 'react-router-dom';
+import Home from '../pages/Home.jsx';
+import CardDetail from '../pages/TarotDetail.jsx';
+import Tirada from '../pages/Reading.jsx';
+import NavBar from "../components/NavBar.jsx"
+import { Outlet } from 'react-router-dom';
+
 
 const Layout = () => {
   return (
     <>
-    <nav>Mi navbar</nav>
-    <Outlet />
-    <footer>Mi footer</footer>
+      <NavBar />
+      <Outlet />
+        
     </>
-  )
+  );
 }
 
 export default Layout;
