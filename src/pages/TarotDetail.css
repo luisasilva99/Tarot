@@ -1,0 +1,60 @@
+.card-detail-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-section, .goddess-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.card-img, .goddess-img {
+  width: 200px; /* Imagen más pequeña */
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.card-info, .goddess-info {
+  text-align: left;
+  max-width: 90%;
+}
+
+.card-info p, .goddess-info p {
+  margin: 0.5rem 0;
+}
+
+.goddess-section h2 {
+  margin-bottom: 1rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.back-link:hover {
+  background-color: #0056b3;
+}

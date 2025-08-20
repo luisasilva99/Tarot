@@ -4,6 +4,7 @@ import './Navbar.css';
 const Navbar = () => {
   return (
     <nav className="navbar">
+        <div className="navbar-buttons">
       <ul className="navbar-list">
         <li>
           <NavLink 
@@ -19,10 +20,11 @@ const Navbar = () => {
             to="/reading" 
             className={({ isActive }) => isActive ? "active-link" : ""}
           >
-            Tirada de cartas
+            Lectura de cartas
           </NavLink>
         </li>
       </ul>
+      </div>
     </nav>
   );
 };

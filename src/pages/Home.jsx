@@ -21,21 +21,21 @@ const Home = () => {
     }, []);
 
   return (
-    <>
-    <h1>Página de inicio - Tarot STEM</h1>
-    <div className="card-grid">
+    <div className="home-container">
+      <h1>Descubre qué se esconde detrás de las cartas </h1>
+      <div className="card-grid">
         {cards.map((card) => (
-         <Link key={card.id} to={`/card/${card.id}`} className="card">
+          <Link key={card.id} to={`/card/${card.id}`} className="card">
+            {/* Aquí mostramos la carta boca abajo */}
             <img 
-              src={card.arcaneImage.imageSrc} 
-              alt={card.arcaneName} 
-              className="card-img" 
+              src="../src/assets/card-back.jpg"  // imagen de reverso de carta
+              alt={card.arcaneName}
+              className="card-img"
             />
-            <h3>{card.arcaneName}</h3>
           </Link>
       ))}
     </div>
-    </>
+    </div>
   );
 };
 
