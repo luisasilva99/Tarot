@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getAllCards } from "../services/TarotServices";
 import './Home.css';
 import { Link } from "react-router-dom"
+import cardBack from "../assets/card-back.jpg"
 
 const Home = () => {
     const [cards, setCards] = useState([]);

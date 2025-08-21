@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { getAllCards } from "../services/TarotServices";
 import "./Reading.css";
+import cardBack from "../assets/card-back.jpg"
 
 const Reading = () => {
   const [cards, setCards] = useState([]); // todas las cartas
@@ -24,57 +25,107 @@ const Reading = () => {
     setSelectedCards([]);
   };
 
+ 
   return (
     <div className="reading-container">
-      <h1>Lectura de Cartas: Pasado, Presente y Futuro</h1>
+      <h1>Lectura de Cartas</h1>
 
-      {selectedCards.length < 3 && (
-        <p>Selecciona {3 - selectedCards.length} carta(s) más</p>
+      {/* Bloque de la tirada */}
+      <div className="reading-board">
+        <div className="reading-slot">
+          <h3>Pasado</h3>
+          {selectedCards[0] ? (
+            <img
+              src={selectedCards[0].arcaneImage.imageSrc}
+              alt={selectedCards[0].arcaneName}
+              className="selected-card"
+            />
+          ) : (
+            <div className="empty-slot">Selecciona una carta</div>
+          )}
+        </div>
+
+        <div className="reading-slot">
+          <h3>Presente</h3>
+          {selectedCards[1] ? (
+            <img
+              src={selectedCards[1].arcaneImage.imageSrc}
+              alt={selectedCards[1].arcaneName}
+              className="selected-card"
+            />
+          ) : (
+            <div className="empty-slot">Selecciona una carta</div>
+          )}
+        </div>
+
+        <div className="reading-slot">
+          <h3>Futuro</h3>
+          {selectedCards[2] ? (
+            <img
+              src={selectedCards[2].arcaneImage.imageSrc}
+              alt={selectedCards[2].arcaneName}
+              className="selected-card"
+            />
+          ) : (
+            <div className="empty-slot">Selecciona una carta</div>
+          )}
+        </div>
+      </div>
+
+      {/* Botón reset */}
+      {selectedCards.length > 0 && (
+        <button onClick={handleReset} className="reset-btn">
+          Reiniciar tirada
+        </button>
       )}
 
-      {/* 🔹 Grid de cartas boca abajo */}
+       {selectedCards.length === 3 && (
+  <div className="reading-meanings">
+    <h2>Interpretación de la Tirada</h2>
+    <div className="meanings-grid">
+      {["Pasado", "Presente", "Futuro"].map((pos, index) => {
+        const card = selectedCards[index];
+        return (
+          <div key={pos} className="meaning">
+            <h3>{pos}</h3>
+            <img
+              src={card.arcaneImage.imageSrc}
+              alt={card.arcaneName}
+              className="meaning-img"
+            />
+            <h4>{card.arcaneName}</h4>
+            <p><strong>Descripción:</strong> {card.arcaneDescription}</p>
+            <p><strong>Diosa:</strong> {card.goddessName}</p>
+            <img
+              src={card.goddessImage.imageSrc}
+              alt={card.goddessName}
+              className="meaning-img goddess-img"
+            />
+            <p><em>{card.goddessDescription}</em></p>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+)}
+
+      {/* Cartas para elegir */}
+      <h2>Selecciona tus cartas</h2>
       <div className="card-grid">
         {cards.map((card) => (
           <div
             key={card.id}
-            className={`card ${selectedCards.find(c => c.id === card.id) ? "selected" : ""}`}
+            className="card"
             onClick={() => handleSelectCard(card)}
           >
-            <img src="../src/assets/card-back.jpg" alt="Carta boca abajo" />
+            <img
+              src={cardBack}
+              alt="Carta boca abajo"
+              className="card-img"
+            />
           </div>
         ))}
       </div>
-
-      {/* 🔹 Resultado */}
-      {selectedCards.length === 3 && (
-        <div className="reading-result">
-          <h2>Tu tirada</h2>
-          <div className="positions">
-            <div>
-              <h3>Pasado</h3>
-              <img src={selectedCards[0].arcaneImage.imageSrc} alt={selectedCards[0].arcaneName} />
-              <p><strong>{selectedCards[0].arcaneName}</strong></p>
-              <p>{selectedCards[0].arcaneDescription}</p>
-              <p><strong>Diosa:</strong> {selectedCards[0].goddessName}</p>
-            </div>
-            <div>
-              <h3>Presente</h3>
-              <img src={selectedCards[1].arcaneImage.imageSrc} alt={selectedCards[1].arcaneName} />
-              <p><strong>{selectedCards[1].arcaneName}</strong></p>
-              <p>{selectedCards[1].arcaneDescription}</p>
-              <p><strong>Diosa:</strong> {selectedCards[1].goddessName}</p>
-            </div>
-            <div>
-              <h3>Futuro</h3>
-              <img src={selectedCards[2].arcaneImage.imageSrc} alt={selectedCards[2].arcaneName} />
-              <p><strong>{selectedCards[2].arcaneName}</strong></p>
-              <p>{selectedCards[2].arcaneDescription}</p>
-              <p><strong>Diosa:</strong> {selectedCards[2].goddessName}</p>
-            </div>
-          </div>
-          <button onClick={handleReset}>🔄 Reiniciar tirada</button>
-        </div>
-      )}
     </div>
   );
 };

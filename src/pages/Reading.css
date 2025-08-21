@@ -61,3 +61,131 @@
 .positions img:hover {
   transform: scale(1.05);
 }
+
+.reading-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.reading-board {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.reading-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+}
+
+.empty-slot {
+  width: 100px;
+  height: 150px;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.selected-card {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.reset-btn {
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  background: crimson;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background: darkred;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+.card {
+  width: 100px;
+  height: 150px;
+  cursor: pointer;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.reading-meanings {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.meanings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .meanings-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .meanings-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.meaning {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.meaning h3 {
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.meaning h4 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.meaning-img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  border-radius: 8px;
+  margin: 0.5rem auto;
+  display: block;
+}
+
+.goddess-img {
+  max-width: 120px;
+  opacity: 0.9;
+}
