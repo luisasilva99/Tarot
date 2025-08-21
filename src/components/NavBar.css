@@ -1,37 +1,47 @@
 .navbar {
-  background-color: #333;
-  padding: 1rem 0;
+  background-image: url("../assets/fondo3.jpg");
+  padding: 50px 40px;
   display: flex;
   justify-content: center; /* centra horizontalmente */
-  align-items: center;
-}
+  
+ }
 
 .navbar-buttons {
   display: flex;
+  gap: 40px; 
 }
 
 .navbar-list {
   display: flex;
   list-style: none;
-  gap: 1rem; /* espacio entre los botones */
-  margin: 0;
   padding: 0;
+  margin: 0;
+  gap: 40px;
 }
 
-.nav-btn {
-  padding: 0.5rem 1.5rem;
-  background-color: #f0c040;
-  color: #333;
+.navbar-list li {
+  margin: 0;
+}
+
+.navbar-list li a {
+  display: inline-block;
+  background-color: #333; /* color oscuro del botón */
+  color: #fff;
+  padding: 10px 40px; /* tamaño del botón */
+  border-radius: 25px; /* bordes redondeados */
   text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
+  font-size: 16px;
+  transition: all 0.3s ease;
+    white-space: nowrap; /* evita que el texto se divida en varias líneas */
+  overflow: hidden;    /* corta cualquier contenido extra */
+  text-overflow: ellipsis; /* opcional: muestra "..." si el texto es muy largo */
 }
 
-.nav-btn:hover {
-  background-color: #e6b030;
+.navbar-list li a:hover {
+  background-color: #555; /* efecto al pasar el mouse */
+  transform: scale(1.05); /* pequeño “zoom” */
 }
 
 .active-link {
-  border: 2px solid #fff;
+  background-color: #444; /* color diferente para el link activo */
 }

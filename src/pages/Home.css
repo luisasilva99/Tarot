@@ -1,6 +1,15 @@
 .home-container {
   text-align: center;
   padding: 2rem;
+  
+  
+}
+body{
+   
+    background-size: cover;   /* que ocupe toda la pantalla */
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* asegura que siempre cubra */
 }
 
 .card-grid {
@@ -32,3 +41,4 @@
   object-fit: cover;
   border-radius: 8px;
 }
+
