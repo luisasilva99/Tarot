@@ -4,12 +4,10 @@
   color: #fff;
   font-family: 'Cinzel', serif;
   font-size: 14px;
-
-  /* lo importante */
-  width: 100%;             /* que ocupe toda la pantalla */
-  padding: 20px 0;         /* espacio arriba y abajo */
-  text-align: center;      /* centra el texto */
-  position: relative;      /* evita conflictos */
+  width: 100%;             
+  padding: 20px 0;         
+  text-align: center;      
+  position: relative;     
   left: 0;
 }
 

@@ -27,9 +27,8 @@ const Home = () => {
       <div className="card-grid">
         {cards.map((card) => (
           <Link key={card.id} to={`/card/${card.id}`} className="card">
-            {/* Aquí mostramos la carta boca abajo */}
             <img 
-              src="../src/assets/card-back.jpg"  // imagen de reverso de carta
+              src="../src/assets/card-back.jpg"  
               alt={card.arcaneName}
               className="card-img"
             />
