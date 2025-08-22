@@ -62,6 +62,7 @@
   transform: scale(1.05);
 }
 
+
 .reading-container {
   text-align: center;
   padding: 2rem;
@@ -91,6 +92,7 @@
   justify-content: center;
   font-size: 0.8rem;
   color: gold;
+  -webkit-text-stroke:  black;
   border-color: gold;
 }
 

@@ -3,13 +3,13 @@
     padding: 50px 40px;
     display: flex;
     justify-content: center;
-    /* centra horizontalmente */
 
 }
 
 .navbar-buttons {
     display: flex;
     gap: 40px;
+    justify-content: center;
 }
 
 .navbar-list {
@@ -27,32 +27,42 @@
 .navbar-list li a {
     display: inline-block;
     background-color: #831f83;
-    /* color oscuro del botón */
     color: gold;
     border-color: black;
     padding: 10px 40px;
-    /* tamaño del botón */
     border-radius: 25px;
-    /* bordes redondeados */
     text-decoration: none;
     font-size: 16px;
     transition: all 0.3s ease;
     white-space: nowrap;
-    /* evita que el texto se divida en varias líneas */
     overflow: hidden;
-    /* corta cualquier contenido extra */
     text-overflow: ellipsis;
-    /* opcional: muestra "..." si el texto es muy largo */
 }
+    
 
 .navbar-list li a:hover {
     background-color: #3c0c58;
-    /* efecto al pasar el mouse */
     transform: scale(1.05);
-    /* pequeño “zoom” */
+    
 }
 
 .active-link {
     background-color: #444;
-    /* color diferente para el link activo */
+   
+}
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center;
+  }
+  .navbar-list {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar-list li a {
+    width: 80%; 
+    text-align: center;
+  }
 }

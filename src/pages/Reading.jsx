@@ -81,7 +81,7 @@ const Reading = () => {
 
        {selectedCards.length === 3 && (
   <div className="reading-meanings">
-    <h2>Interpretación de la Tirada</h2>
+    <h2>Tu lectura</h2>
     <div className="meanings-grid">
       {["Pasado", "Presente", "Futuro"].map((pos, index) => {
         const card = selectedCards[index];

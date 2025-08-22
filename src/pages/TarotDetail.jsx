@@ -48,7 +48,7 @@ return (
         </div>
       </div>
 
-      <Link to="/" className="back-link">⬅ Volver al listado</Link>
+      <Link to="/" className="back-link">⬅ Volver</Link>
     </div>
   );
 };

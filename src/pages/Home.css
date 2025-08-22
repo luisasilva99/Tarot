@@ -8,11 +8,12 @@
 body {
     background-image: url(../assets/fondo5.jpg);
     background-size: cover;
-    /* que ocupe toda la pantalla */
+    margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
     background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
-    /* asegura que siempre cubra */
     font-family: 'Cinzel', serif;
     color: gold;
 }

@@ -3,6 +3,7 @@ import Layout from "../layout/Layout";
 import Home from "../pages/Home";
 import TarotDetail from "../pages/TarotDetail";
 import Reading from "../pages/Reading";
+import Header from "../components/Header"
 
 const router = createBrowserRouter([{
     path: "/",
