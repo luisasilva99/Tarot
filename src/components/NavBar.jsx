@@ -12,7 +12,7 @@ const Navbar = () => {
             className={({ isActive }) => isActive ? "active-link" : ""}
             end
           >
-            Ver cartas
+            VER CARTAS
           </NavLink>
         </li>
         <li>
@@ -20,7 +20,7 @@ const Navbar = () => {
             to="/reading" 
             className={({ isActive }) => isActive ? "active-link" : ""}
           >
-            Lectura de cartas
+            LECTURA DE CARTAS
           </NavLink>
         </li>
       </ul>

@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Pro:wght@400;600&display=swap');
+
+
 .card-detail-container {
   max-width: 700px;
   margin: 2rem auto;
   padding: 1rem;
   text-align: center;
-  font-family: 'Arial', sans-serif;
-  color: #333;
+  font-family: 'Cinzel', sans-serif;
+  color: gold;
 }
 
 .title {
@@ -17,7 +20,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 2rem;
-  background: #f9f9f9;
+  background: #831f83;
   padding: 1rem;
   border-radius: 15px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
@@ -48,7 +51,7 @@
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background-color: #007bff;
+  background-color: #831f83;
   color: white;
   border-radius: 8px;
   text-decoration: none;
@@ -56,5 +59,5 @@
 }
 
 .back-link:hover {
-  background-color: #0056b3;
+  background-color: gold;
 }

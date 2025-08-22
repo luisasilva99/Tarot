@@ -84,13 +84,14 @@
 .empty-slot {
   width: 100px;
   height: 150px;
-  border: 2px dashed #ccc;
+  border: 2px dashed;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.8rem;
-  color: #999;
+  color: gold;
+  border-color: gold;
 }
 
 .selected-card {
@@ -103,15 +104,16 @@
 .reset-btn {
   margin-bottom: 2rem;
   padding: 0.5rem 1rem;
-  background: crimson;
-  color: white;
+  background: #831f83;
+  color: gold;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  border-color: black;
 }
 
 .reset-btn:hover {
-  background: darkred;
+  background: #3c0c58;
 }
 
 .card-grid {
@@ -164,11 +166,12 @@
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
   text-align: center;
+  background-color: #831f83;
 }
 
 .meaning h3 {
   margin-bottom: 0.5rem;
-  color: #444;
+  color: gold;
 }
 
 .meaning h4 {
